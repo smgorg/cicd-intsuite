@@ -67,7 +67,7 @@ jobs:
           echo "token=$TOKEN" >> $GITHUB_OUTPUT
 
       - name: Check team authorization
-        uses: smgorg/cicd-actions/.github/actions/check-team-authorization@main
+        uses: smgorg/cicd-actions/.github/actions/check-team-authorization@v1
         with:
           team-slug: ${{ vars.BTP_DEV_TEAM_SLUG }}
           github-token: ${{ steps.org-token.outputs.token }}
@@ -84,9 +84,9 @@ jobs:
   btp-download-btp:
     needs: initialize
     name: Download ${{ inputs.mode }}
-    uses: smgorg/cicd-actions/.github/workflows/download-btp-to-git.yml@main
+    uses: smgorg/cicd-actions/.github/workflows/download-btp-to-git.yml@v1
     with:
-       workflow-ref: main
+       workflow-ref: v1
        source-env: DEV
        target-ref: development
        ids: ${{ inputs.id }}
@@ -131,9 +131,9 @@ jobs:
   btp-process-id:
     needs: [read-env-vars-tst]
     name: Process ${{ github.event.inputs.mode }}
-    uses: smgorg/cicd-actions/.github/workflows/delete-upload.yml@main
+    uses: smgorg/cicd-actions/.github/workflows/delete-upload.yml@v1
     with:
-      workflow-ref: main
+      workflow-ref: v1
       target-env: TST
       source-ref: development
       integrationpackages-upload-ids: ${{ github.event.inputs.mode == 'IntegrationPackages' && github.event.inputs.id || '' }}

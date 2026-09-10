@@ -72,7 +72,7 @@ jobs:
           echo "token=$TOKEN" >> $GITHUB_OUTPUT
 
       - name: Check team authorization
-        uses: smgorg/cicd-actions/.github/actions/check-team-authorization@main
+        uses: smgorg/cicd-actions/.github/actions/check-team-authorization@v1
         with:
           team-slug: ${{ vars.BTP_ADMIN_TEAM_SLUG }}
           github-token: ${{ steps.org-token.outputs.token }}
@@ -89,9 +89,9 @@ jobs:
   btp-download-package:
     needs: [initialize]
     name: Download from BTP to GIT
-    uses: smgorg/cicd-actions/.github/workflows/download-btp-to-git.yml@main
+    uses: smgorg/cicd-actions/.github/workflows/download-btp-to-git.yml@v1
     with:
-       workflow-ref: main
+       workflow-ref: v1
        source-env: ${{ inputs.source-env }}
        target-ref: download
        ids: ${{ inputs.ids }}
