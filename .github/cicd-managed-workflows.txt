@@ -1,0 +1,10 @@
+# SAP CICD managed workflow files — do not edit manually
+# Updated: 2026-09-10T08:07:39Z
+btp-delete-from-btp-and-git.yml
+btp-deploy-delete.yml
+btp-download-git-upload-deploy.yml
+btp-download-to-git.yml
+btp-release-import.yml
+btp-update-externalized-iflow-parameters.yml
+git-create-release.yml
+sync-cicd-templates.yml
