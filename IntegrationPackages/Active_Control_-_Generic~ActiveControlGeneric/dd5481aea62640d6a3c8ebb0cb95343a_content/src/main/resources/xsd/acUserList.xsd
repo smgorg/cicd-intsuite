@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <xsd:element name="acUserList">
+   <xsd:complexType>
+      <xsd:sequence>
+         <xsd:element name="users" maxOccurs="unbounded">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="uname" />
+                  <xsd:element name="fullName" />
+                  <xsd:element name="initials" />
+                  <xsd:element name="picture" />
+                  <xsd:element name="email" />
+                  <xsd:element name="validTo" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

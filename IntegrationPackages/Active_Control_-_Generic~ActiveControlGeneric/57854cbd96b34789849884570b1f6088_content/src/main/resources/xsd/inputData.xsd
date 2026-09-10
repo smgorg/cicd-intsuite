@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <xsd:element name="inputData">
+    <xsd:complexType>
+      <xsd:sequence>
+         <xsd:element name="reference" />
+         <xsd:element name="title" />
+         <xsd:element name="description" />
+         <xsd:element name="project" />
+         <xsd:element name="groupId" />
+         <xsd:element name="typeId" />
+         <xsd:element name="priority" />
+         <xsd:element name="state" />
+         <xsd:element name="operation" />
+         <xsd:element name="user" />
+         <xsd:element name="extId" />
+         <xsd:element name="customField" minOccurs="0" maxOccurs="unbounded">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="id" minOccurs="0" />
+                  <xsd:element name="value" minOccurs="0" />
+                  <xsd:element name="code" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

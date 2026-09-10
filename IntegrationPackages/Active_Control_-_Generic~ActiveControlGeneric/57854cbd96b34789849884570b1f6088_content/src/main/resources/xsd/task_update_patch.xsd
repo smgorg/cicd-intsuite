@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="task">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="task">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:unsignedLong" />
+              <xs:element name="caption" type="xs:string" />
+              <xs:element name="reference" type="xs:string" />
+              <xs:element name="group">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="groupId" type="xs:unsignedLong" />
+                    <xs:element name="caption" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="type">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="typeId" type="xs:unsignedLong" />
+                    <xs:element name="caption" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="priority">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="id" type="xs:unsignedByte" />
+                    <xs:element name="caption" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="project">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="projectId" type="xs:unsignedLong" />
+                    <xs:element name="caption" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>     
+              <xs:element name="description" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="customFields">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="id" type="xs:unsignedShort" />
+                    <xs:element minOccurs="0" name="value" type="xs:unsignedShort" />
+					<xs:element minOccurs="0" name="code" type="xs:unsignedShort" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

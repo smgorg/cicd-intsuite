@@ -1,0 +1,134 @@
+{
+  "PackageIntegrationFlowParameters": {
+    "PackageName": "Active_Control_-_Generic",
+    "PackageID": "ActiveControlGeneric",
+    "Artifacts": [
+      {
+        "ArtifactID": "AC_Business_Task_Create_and_Update",
+        "ArtifactName": "AC Business Task Create and Update",
+        "ArtifactType": "INTEGRATION_FLOW",
+        "Parameters": [
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "webplatform_hostname",
+            "ParameterValues": {
+              "Default": "https://webplatformdemo2.basistechnologies.info"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "sys_Id",
+            "ParameterValues": {
+              "Default": "ACX"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "ac_Type",
+            "ParameterValues": {
+              "Default": "10011120600000002156"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "ac_User",
+            "ParameterValues": {
+              "Default": "ac_calm"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "ac_Customfield",
+            "ParameterValues": {
+              "Default": "501"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "header.bti-wp-host",
+            "ParameterValues": {
+              "Default": "{header.bti-wp-host}"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "bti-wp-host",
+            "ParameterValues": {
+              "Default": "https://webplatformhost.com"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "bti-ac-user",
+            "ParameterValues": {
+              "Default": "ac_user"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "bti-ac-sysid",
+            "ParameterValues": {
+              "Default": "SID"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "SAP_ProfileId",
+            "ParameterValues": {
+              "Default": "iflmap"
+            }
+          }
+        ]
+      },
+      {
+        "ArtifactID": "AC_Webhook_to_External",
+        "ArtifactName": "AC Webhook to External",
+        "ArtifactType": "INTEGRATION_FLOW",
+        "Parameters": [
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "calm_hostname",
+            "ParameterValues": {
+              "Default": "https://bti-cloudalm.eu10.alm.cloud.sap"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "ac_Customfield",
+            "ParameterValues": {
+              "Default": "519"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "calm_user",
+            "ParameterValues": {
+              "Default": "CALM"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "SAP_ProfileId",
+            "ParameterValues": {
+              "Default": "iflmap"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

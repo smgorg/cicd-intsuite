@@ -1,0 +1,24 @@
+{
+  "PackageIntegrationFlowDeployments": {
+    "PackageName": "Active_Control_-_Generic",
+    "PackageID": "ActiveControlGeneric",
+    "IntegrationFlows": [
+      {
+        "ArtifactID": "AC_Business_Task_Create_and_Update",
+        "ArtifactName": "AC Business Task Create and Update",
+        "Deploy": "false",
+        "Rank": "100",
+        "LogLevel": "INFO",
+        "Runtimes": "iflmap"
+      },
+      {
+        "ArtifactID": "AC_Webhook_to_External",
+        "ArtifactName": "AC Webhook to External",
+        "Deploy": "false",
+        "Rank": "100",
+        "LogLevel": "INFO",
+        "Runtimes": "iflmap"
+      }
+    ]
+  }
+}

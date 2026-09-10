@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="task">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="task">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:unsignedLong" />
+              <xs:element name="caption" type="xs:string" />
+              <xs:element name="reference" type="xs:string" />
+              <xs:element name="group">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="groupId" type="xs:unsignedLong" />
+                    <xs:element name="caption" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="type">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="typeId" type="xs:unsignedLong" />
+                    <xs:element name="caption" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="tester">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="uname" type="xs:string" />
+                    <xs:element name="fullName" type="xs:string" />
+                    <xs:element name="initials" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="priority">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="id" type="xs:unsignedByte" />
+                    <xs:element name="caption" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="project">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="projectId" type="xs:unsignedLong" />
+                    <xs:element name="caption" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="locked" type="xs:boolean" />
+              <xs:element name="deploymentStatus">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="statusId" />
+                    <xs:element name="caption" />
+                    <xs:element name="statusIsOverridden" type="xs:boolean" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="planningStatus">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="statusId" />
+                    <xs:element name="caption" />
+                    <xs:element name="statusIsOverridden" type="xs:boolean" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="testingStatus">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="id" />
+                    <xs:element name="caption" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ragStatuses">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="unbounded" name="statuses">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="name" />
+                          <xs:element minOccurs="0" name="status" />
+                          <xs:element minOccurs="0" name="value" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="objectCount" type="xs:unsignedByte" />
+                    <xs:element name="keyCount" type="xs:unsignedByte" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="creationDateTime" type="xs:dateTime" />
+              <xs:element name="createdBy">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="uname" type="xs:string" />
+                    <xs:element name="fullName" type="xs:string" />
+                    <xs:element name="initials" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="description" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="customFields">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="id" type="xs:unsignedShort" />
+                    <xs:element minOccurs="0" name="value" type="xs:unsignedShort" />
+					<xs:element minOccurs="0" name="code" type="xs:unsignedShort" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="relationships">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="id" type="xs:string" />
+                    <xs:element minOccurs="0" name="caption" type="xs:string" />
+                    <xs:element minOccurs="0" name="reference" type="xs:string" />
+                    <xs:element minOccurs="0" name="creator">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="uname" type="xs:string" />
+                          <xs:element minOccurs="0" name="fullName" type="xs:string" />
+                          <xs:element minOccurs="0" name="initials" type="xs:string" />
+                          <xs:element minOccurs="0" name="picture" type="xs:string" />
+                          <xs:element minOccurs="0" name="email" type="xs:string" />
+                          <xs:element minOccurs="0" name="validTo" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="dependencies">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="id" type="xs:string" />
+                    <xs:element minOccurs="0" name="caption" type="xs:string" />
+                    <xs:element minOccurs="0" name="reference" type="xs:string" />
+                    <xs:element minOccurs="0" name="creator">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="uname" type="xs:string" />
+                          <xs:element minOccurs="0" name="fullName" type="xs:string" />
+                          <xs:element minOccurs="0" name="initials" type="xs:string" />
+                          <xs:element minOccurs="0" name="picture" type="xs:string" />
+                          <xs:element minOccurs="0" name="email" type="xs:string" />
+                          <xs:element minOccurs="0" name="validTo" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="taskAuthorizedActions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="overwritePlanningStatus" type="xs:boolean" />
+              <xs:element name="overwriteDeploymentStatus" type="xs:boolean" />
+              <xs:element name="canAddRoleToTask" type="xs:boolean" />
+              <xs:element name="canAddUserToRole" type="xs:boolean" />
+              <xs:element name="canAddTester" type="xs:boolean" />
+              <xs:element name="canRemoveTester" type="xs:boolean" />
+              <xs:element name="canSetDefaultTester" type="xs:boolean" />
+              <xs:element name="addTransportToTask" type="xs:boolean" />
+              <xs:element name="canAddFileAttachments" type="xs:boolean" />
+              <xs:element name="canAddUrlAttachments" type="xs:boolean" />
+              <xs:element name="canRemoveAttachments" type="xs:boolean" />
+              <xs:element name="canLockTask" type="xs:boolean" />
+              <xs:element name="canUnlockTask" type="xs:boolean" />
+              <xs:element name="canDeleteTask" type="xs:boolean" />
+              <xs:element name="canCreateTransports" type="xs:boolean" />
+              <xs:element name="canChangeTask" type="xs:boolean" />
+              <xs:element name="referenceIsEditable" type="xs:boolean" />
+              <xs:element name="canCreateTOCFull" type="xs:boolean" />
+              <xs:element name="canCreateTOCDelta" type="xs:boolean" />
+              <xs:element name="canCreateTocSpecificSAPTasks" type="xs:boolean" />
+              <xs:element name="canCreateTocProduction" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

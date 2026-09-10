@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="task">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:unsignedLong" />
+              <xs:element name="CAPTION" type="xs:unsignedShort" />
+              <xs:element name="REFERENCE" type="xs:unsignedShort" />
+              <xs:element name="GROUPID" type="xs:unsignedLong" />
+              <xs:element name="TYPEID" type="xs:unsignedLong" />
+              <xs:element name="TESTERID" type="xs:string" />
+              <xs:element name="PRIORITY" type="xs:unsignedByte" />
+              <xs:element name="PROJECTID" type="xs:unsignedLong" />
+              <xs:element name="LOCKED" />
+              <xs:element name="PATH" type="xs:unsignedByte" />
+              <xs:element name="STAT_DEPL" type="xs:unsignedLong" />
+              <xs:element name="STAT_PLAN" />
+              <xs:element name="STAT_DEPL_MAN" />
+              <xs:element name="STAT_PLAN_MAN" />
+              <xs:element name="OWNER" />
+              <xs:element name="TEXT" type="xs:string" />
+              <xs:element minOccurs="0" name="CF_500"/>
+				<xs:element minOccurs="0" name="CF_501"/>
+				<xs:element minOccurs="0" name="CF_502"/>
+				<xs:element minOccurs="0" name="CF_503"/>
+				<xs:element minOccurs="0" name="CF_504"/>
+				<xs:element minOccurs="0" name="CF_505"/>
+				<xs:element minOccurs="0" name="CF_506"/>
+				<xs:element minOccurs="0" name="CF_507"/>
+				<xs:element minOccurs="0" name="CF_508"/>
+				<xs:element minOccurs="0" name="CF_509"/>
+				<xs:element minOccurs="0" name="CF_510"/>
+				<xs:element minOccurs="0" name="CF_511"/>
+				<xs:element minOccurs="0" name="CF_512"/>
+				<xs:element minOccurs="0" name="CF_513"/>
+				<xs:element minOccurs="0" name="CF_514"/>
+				<xs:element minOccurs="0" name="CF_515"/>
+				<xs:element minOccurs="0" name="CF_516"/>
+				<xs:element minOccurs="0" name="CF_517"/>
+				<xs:element minOccurs="0" name="CF_518"/>
+				<xs:element minOccurs="0" name="CF_519"/>
+				<xs:element minOccurs="0" name="CF_520"/>
+				<xs:element minOccurs="0" name="CF_521"/>
+				<xs:element minOccurs="0" name="CF_522"/>
+				<xs:element minOccurs="0" name="CF_523"/>
+				<xs:element minOccurs="0" name="CF_524"/>
+				<xs:element minOccurs="0" name="CF_525"/>
+				<xs:element minOccurs="0" name="CF_526"/>
+				<xs:element minOccurs="0" name="CF_527"/>
+				<xs:element minOccurs="0" name="CF_528"/>
+				<xs:element minOccurs="0" name="CF_529"/>
+				<xs:element minOccurs="0" name="CF_530"/>
+				<xs:element minOccurs="0" name="CF_531"/>
+				<xs:element minOccurs="0" name="CF_532"/>
+				<xs:element minOccurs="0" name="CF_533"/>
+				<xs:element minOccurs="0" name="CF_534"/>
+				<xs:element minOccurs="0" name="CF_535"/>
+				<xs:element minOccurs="0" name="CF_536"/>
+				<xs:element minOccurs="0" name="CF_537"/>
+				<xs:element minOccurs="0" name="CF_538"/>
+				<xs:element minOccurs="0" name="CF_539"/>
+				<xs:element minOccurs="0" name="CF_540"/>
+				<xs:element minOccurs="0" name="CF_541"/>
+				<xs:element minOccurs="0" name="CF_542"/>
+				<xs:element minOccurs="0" name="CF_543"/>
+				<xs:element minOccurs="0" name="CF_544"/>
+				<xs:element minOccurs="0" name="CF_545"/>
+				<xs:element minOccurs="0" name="CF_546"/>
+				<xs:element minOccurs="0" name="CF_547"/>
+				<xs:element minOccurs="0" name="CF_548"/>
+				<xs:element minOccurs="0" name="CF_549"/>
+				<xs:element minOccurs="0" name="CF_550"/>
+              <xs:element maxOccurs="unbounded" name="TRANSPORTS">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TRKORR" type="xs:string" />
+                    <xs:element name="REQTEXT" type="xs:string" />
+                    <xs:element name="FORMDESCRIPTION" />
+                    <xs:element name="GROUPID" type="xs:unsignedLong" />
+                    <xs:element name="TYPEID" type="xs:unsignedLong" />
+                    <xs:element name="TRFUNCTION" type="xs:string" />
+                    <xs:element name="TRCATEGORY" />
+                    <xs:element name="TRSTATUS" type="xs:string" />
+                    <xs:element name="CLIENT" type="xs:unsignedByte" />
+                    <xs:element name="REQUESTOR" type="xs:string" />
+                    <xs:element name="REQNAME" />
+                    <xs:element name="REQDATE" type="xs:unsignedInt" />
+                    <xs:element name="REQTIME" type="xs:unsignedInt" />
+                    <xs:element name="RELDATE" />
+                    <xs:element name="RELTIME" />
+                    <xs:element name="PATH" type="xs:unsignedByte" />
+                    <xs:element name="HASFORM" />
+                    <xs:element name="OWNER" />
+                    <xs:element name="COMPLETED" />
+                    <xs:element name="CLIDEP" />
+                    <xs:element name="QUEUED" />
+                    <xs:element name="HIDDEN" />
+                    <xs:element name="LOCKED" />
+                    <xs:element name="CONFLICTS" />
+                    <xs:element name="REFERENCE" />
+                    <xs:element name="UMODES" />
+                    <xs:element name="NOEXPLOGS" />
+                    <xs:element name="EXPORTSTAT" />
+                    <xs:element name="TSTIMPSTAT" />
+                    <xs:element name="LOCSTATUS" />
+                    <xs:element name="MANDT" />
+                    <xs:element name="RETURNCODE" />
+                    <xs:element name="TARSYSTEM" type="xs:string" />
+                    <xs:element name="CHANGETYPE" />
+                    <xs:element name="MANUAL_STEP_STATUS" />
+                    <xs:element name="PREV_IMP_RESULT" />
+                    <xs:element name="CONFLICT_STAT" type="xs:unsignedByte" />
+                    <xs:element name="SCI_STAT" type="xs:unsignedByte" />
+                    <xs:element name="RISK_STAT" type="xs:unsignedByte" />
+                    <xs:element name="NUM_OBJECTS" type="xs:unsignedByte" />
+                    <xs:element name="NUM_KEYS" type="xs:unsignedByte" />
+                    <xs:element name="CONF_STAT_RUNID" />
+                    <xs:element name="SCI_STAT_RUNID" />
+                    <xs:element name="RISK_STAT_RUNID" />
+                    <xs:element name="REJECTED" />
+                    <xs:element name="AUTO_APPR_STATUS" />
+                    <xs:element name="CF_501" type="xs:string" />
+                    <xs:element name="CF_506" type="xs:string" />
+                    <xs:element name="LOCATIONS">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TARGET" type="xs:unsignedByte" />
+                          <xs:element name="LOCATION" type="xs:string" />
+                          <xs:element name="STATUS" type="xs:string" />
+                          <xs:element name="SEQUENCE" type="xs:unsignedByte" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="TRANSPORTS_WITHOUT_FORM" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
