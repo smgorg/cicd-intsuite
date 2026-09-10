@@ -105,9 +105,9 @@ jobs:
   create-release:
     needs: [initialize]
     name: Create Release
-    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/create-release.yml@v1.3.0
+    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/create-release.yml@v1.3.1
     with:
-      workflow-ref: v1.3.0
+      workflow-ref: v1.3.1
       release-name: ${{ github.event.inputs.release-name }}
       simulation: ${{ github.event.inputs.simulation == 'true' }}
       git-cicd-orgrepo: ${{ needs.initialize.outputs.git-cicd-orgrepo }}

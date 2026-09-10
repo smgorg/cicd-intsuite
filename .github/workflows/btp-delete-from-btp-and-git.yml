@@ -72,7 +72,7 @@ jobs:
           echo "token=$TOKEN" >> $GITHUB_OUTPUT
 
       - name: Check team authorization
-        uses: smgorg/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1.3.0
+        uses: smgorg/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1.3.1
         with:
           team-slug: ${{ vars.BTP_DEV_TEAM_SLUG }}
           github-token: ${{ steps.org-token.outputs.token }}
@@ -90,9 +90,9 @@ jobs:
   delete-on-dev:
     needs: initialize-dev
     name: Delete from DEV
-    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1.3.0
+    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1.3.1
     with:
-      workflow-ref: v1.3.0
+      workflow-ref: v1.3.1
       target-env: DEV
       source-ref: development
       integrationpackages-delete-ids: ${{ github.event.inputs.mode == 'IntegrationPackages' && github.event.inputs.id || '' }}
@@ -135,9 +135,9 @@ jobs:
   delete-on-tst:
     needs: initialize-tst
     name: Delete from TST
-    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1.3.0
+    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1.3.1
     with:
-      workflow-ref: v1.3.0
+      workflow-ref: v1.3.1
       target-env: TST
       source-ref: development
       integrationpackages-delete-ids: ${{ github.event.inputs.mode == 'IntegrationPackages' && github.event.inputs.id || '' }}
@@ -157,9 +157,9 @@ jobs:
   delete-from-git:
       needs: [delete-on-tst, initialize-tst]
       name: Delete from GIT
-      uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/delete-dir-from-git.yml@v1.3.0
+      uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/delete-dir-from-git.yml@v1.3.1
       with:
-        workflow-ref: v1.3.0
+        workflow-ref: v1.3.1
         id: ${{ inputs.id }}
         mode: ${{ inputs.mode }}
         source-ref: development

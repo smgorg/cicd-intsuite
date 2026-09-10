@@ -139,9 +139,9 @@ jobs:
   analyze-changes:
     needs: [initialize]
     name: Analyze Changes
-    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/analyze-changes.yml@v1.3.0
+    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/analyze-changes.yml@v1.3.1
     with:
-      workflow-ref: v1.3.0
+      workflow-ref: v1.3.1
       target-env: ${{ github.event.inputs.target-env }}
       base-ref: ${{ github.event.inputs.base-ref }}
       target-ref: ${{ github.event.inputs.target-ref }}
@@ -161,9 +161,9 @@ jobs:
     needs: [initialize, analyze-changes]
     name: Execute Deployment
     if: ${{ github.event.inputs.perform-deploy == 'true' }}
-    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1.3.0
+    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/delete-upload.yml@v1.3.1
     with:
-      workflow-ref: v1.3.0
+      workflow-ref: v1.3.1
       target-env: ${{ github.event.inputs.target-env }}
       source-ref: ${{ github.event.inputs.target-ref }}
       integrationpackages-upload-ids: ${{ needs.analyze-changes.outputs.package_upload_csv_content }}

@@ -70,7 +70,7 @@ jobs:
           echo "token=$TOKEN" >> $GITHUB_OUTPUT
 
       - name: Check team authorization
-        uses: smgorg/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1.3.0
+        uses: smgorg/cicd-actions-for-sap-integration-suite/.github/actions/check-team-authorization@v1.3.1
         with:
           team-slug: ${{ vars.BTP_DEV_TEAM_SLUG }}
           github-token: ${{ steps.org-token.outputs.token }}
@@ -86,9 +86,9 @@ jobs:
 
   update-externalized-iflow-parameters:
     needs: initialize
-    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/update-externalized-iflow-parameters.yml@v1.3.0
+    uses: smgorg/cicd-actions-for-sap-integration-suite/.github/workflows/update-externalized-iflow-parameters.yml@v1.3.1
     with:
-       workflow-ref: v1.3.0
+       workflow-ref: v1.3.1
        target-env: ${{ inputs.target-env }}
        iflow-id: ${{ inputs.iflow-id }}
        source-ref: development
