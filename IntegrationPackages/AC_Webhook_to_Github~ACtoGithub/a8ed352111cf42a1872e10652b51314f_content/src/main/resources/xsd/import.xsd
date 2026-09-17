@@ -1,0 +1,19 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="gitHubApproveInput">
+   <xsd:complexType>
+      <xsd:sequence>
+         <xsd:element name="targetId" />
+         <xsd:element name="requests" minOccurs="0" maxOccurs="unbounded">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="sapTimezone" />
+                  <xsd:element name="time" />
+                  <xsd:element name="date" />
+                  <xsd:element name="requestId" maxOccurs="unbounded" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

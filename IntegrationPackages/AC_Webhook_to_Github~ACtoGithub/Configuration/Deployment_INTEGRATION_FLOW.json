@@ -1,0 +1,24 @@
+{
+  "PackageIntegrationFlowDeployments": {
+    "PackageName": "AC_Webhook_to_Github",
+    "PackageID": "ACtoGithub",
+    "IntegrationFlows": [
+      {
+        "ArtifactID": "AC_Webhook_to_GitHub_Workflow",
+        "ArtifactName": "AC Webhook to GitHub Workflow",
+        "Deploy": "false",
+        "Rank": "100",
+        "LogLevel": "INFO",
+        "Runtimes": "iflmap"
+      },
+      {
+        "ArtifactID": "Github_Workflow_to_AC_Import",
+        "ArtifactName": "Github Workflow to AC Import",
+        "Deploy": "false",
+        "Rank": "100",
+        "LogLevel": "INFO",
+        "Runtimes": "iflmap"
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "PackageIntegrationFlowParameters": {
+    "PackageName": "AC_Webhook_to_Github",
+    "PackageID": "ACtoGithub",
+    "Artifacts": [
+      {
+        "ArtifactID": "AC_Webhook_to_GitHub_Workflow",
+        "ArtifactName": "AC Webhook to GitHub Workflow",
+        "ArtifactType": "INTEGRATION_FLOW",
+        "Parameters": [
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "acUser",
+            "ParameterValues": {
+              "Default": "sgibbon"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "wpHostname",
+            "ParameterValues": {
+              "Default": "https://webplatformdemo2.basistechnologies.info"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "gitHubOrg",
+            "ParameterValues": {
+              "Default": "smgorg"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "gitPAT",
+            "ParameterValues": {
+              "Default": "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"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "sysId",
+            "ParameterValues": {
+              "Default": "KTC"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "packageFlag",
+            "ParameterValues": {
+              "Default": "ISP"
+            }
+          },
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "SAP_ProfileId",
+            "ParameterValues": {
+              "Default": "iflmap"
+            }
+          }
+        ]
+      },
+      {
+        "ArtifactID": "Github_Workflow_to_AC_Import",
+        "ArtifactName": "Github Workflow to AC Import",
+        "ArtifactType": "INTEGRATION_FLOW",
+        "Parameters": [
+          {
+            "DataType": "xsd:string",
+            "Description": null,
+            "ParameterKey": "SAP_ProfileId",
+            "ParameterValues": {
+              "Default": "iflmap"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
